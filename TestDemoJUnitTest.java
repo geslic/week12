@@ -2,7 +2,6 @@ package com.promineotech;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
 
@@ -36,8 +35,8 @@ class TestDemoJUnitTest {
 	public static Stream<Arguments> argumentsForAddPositive() {
 		return Stream.of(
 				Arguments.of(3, 5, 8, false),
-				Arguments.of(0, 5, 5, false),
-				Arguments.of(7, 0, 7, false)
+				Arguments.of(0, 5, 5, true),
+				Arguments.of(7, 0, 7, true)
 				);
 		}
 	
@@ -54,9 +53,9 @@ class TestDemoJUnitTest {
 	}
 	public static Stream<Arguments> argumentsForMultiplyPositive() {
 		return Stream.of(
-				Arguments.of(3, 5, 8, false),
-				Arguments.of(0, 5, 5, false),
-				Arguments.of(7, 0, 7, false)
+				Arguments.of(3, 5, 15, false),
+				Arguments.of(0, 5, 0, true),
+				Arguments.of(7, 0, 0, true)
 				);
 	}
 	

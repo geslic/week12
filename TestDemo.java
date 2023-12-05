@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class TestDemo {
 	public int addPositive(int a, int b) {
-		if(a >= 0 && b >= 0) {
+		if(a > 0 && b > 0) {
 			
 			return a + b;
 			
@@ -14,7 +14,7 @@ public class TestDemo {
 		}
 	}
 	public int multiplyPositive(int a, int b) {
-		if(a >= 0 && b >= 0) {
+		if(a > 0 && b > 0) {
 			
 			return a * b;
 		
